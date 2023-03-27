@@ -4,7 +4,7 @@ const mongoose = require("mongoose")
     "body": String,
     "device": String,
     "no_of_comments": Number,
-    "UserId":Number
+    "UserId":String
  })
  const PostModel = mongoose.model("note",PostSchema)
 module.exports = { PostModel}
