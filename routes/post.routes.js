@@ -20,6 +20,7 @@ postRouter.get("/", async (req, res) => {
 const decoded = jwt.verify(token,"masai")
   try {
     if(decoded){
+      console.log(decoded);
     const note = await PostModel.find({"UserId":decoded.userId});
     console.log(note);
     res.status(200).send(note);
